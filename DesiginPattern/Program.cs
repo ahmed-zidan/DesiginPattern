@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesiginPattern.CreationalPatterns.FactoryPattern;
+using System;
 
 namespace DesiginPattern
 {
@@ -6,7 +7,15 @@ namespace DesiginPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            IFactory factory = new SeaFatory();
+            var tr= factory.createTransport();
+
+
+            tr.move();
+            tr.stop();
+
+
         }
     }
 }
